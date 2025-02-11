@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="images/index/favicon.ico" rel="icon">
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <title>HiSchoolCafe | Home</title>
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+          overflow: hidden;
+        }
+    
+        #loader {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #000000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
+        }
+    
+       
+        #content {
+          display: none;
+        }
+      </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader">
+      <dotlottie-player 
+        src="https://lottie.host/d808e9ca-5b01-40b8-adbf-9de75a1c8c5a/wx11XkOpaK.lottie" 
+        background="transparent" 
+        speed="0.95" 
+        style="width: 300px; height: 300px" 
+        loop 
+        autoplay>
+      </dotlottie-player>
+    </div>
+    <script>
+        
+        setTimeout(() => {
+         
+          const loader = document.getElementById("loader");
+          loader.style.display = "none";
+          const mainContent = document.getElementById("main-content");
+          
+          document.body.style.overflow = "auto";
+        }, 5000);
+      </script>
+<body>
+    <header class="d-flex flex-column">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top header" id="myHeader">
+            <div class="container">
+                <a class="navbar-brand" href="#" id="logo-link"><img src="images/index/hi-school-cafe-rembg.png"
+                        id="logo"></a>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link top-link active" href="./index.html">Home<span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link top-link text-white" href="./about.html">About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link top-link text-white" href="./menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link top-link text-white" href="./contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link top-link text-white" href="./announce.html">Announce</a>
+                    </ul>
+                    <a class="nav-link top-link" href="https://www.instagram.com/hi_school_cafe/"
+                        target="_blank"><button class="btn top-btn">Order A Cup</button></a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="main-heading">
+            <div>
+                <h4 class="glow-text">Welcome to HiSchoolCafe</h4>
+                <div class="mt-5 d-flex justify-content-center flex-wrap">
+                    <a href="https://www.instagram.com/hi_school_cafe/" target="_blank">
+                        <button class="btn gold-filled-btn btn-lg">Order A Cup</button>
+                    </a>
+                    <a href="#featured-menu" class="ml-2">
+                        <button class="btn transparent-btn btn-lg">View Menu</button>
+                    </a>
+                    <a href="./announce.html" target="_blank" class="ml-2">
+                        <button class="btn transparent-btn btn-lg">Announce</button>
+                    </a>
+                    <a href="./contact.html" class="ml-2">
+                        <button class="btn transparent-btn btn-lg">Contact</button>
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .main-heading {
+                padding: 20px;
+                text-align: center;
+            }
+
+            .d-flex {
+                display: flex;
+                gap: 10px;
+            }
+
+            .flex-wrap {
+                flex-wrap: wrap;
+            }
+
+            .btn {
+                margin-bottom: 12px;
+            }
+
+            @media (max-width: 768px) {
+                .glow-text {
+                    font-size: 1.8rem;
+                }
+
+                .d-flex {
+                    justify-content: center;
+                    gap: 10px;
+                }
+
+                .btn {
+                    width: 100%;
+                    max-width: 300px;
+                }
+            }
+        </style>
+    </header>
+    <main>
+        <section class="text-center light-black py-5">
+            <h2 class="glow-text ">About Us</h2>
+            <div class="center-text">
+                <p class="text-white text-center pb-1">Enter some text about us.</p>
+            </div>
+            <a href="./about.html">
+                <button class="btn transparent-btn btn-lg">Learn More</button></a>
+        </section>
+
+        <section class="text-center deep-black py-5" id="featured-menu">
+
+            <h2 class="glow-text">Featured menu</h2>
+            <div class="container">
+                <div class="row m-0">
+                    <div class="col-sm-4 text-center">
+                        <img src="./images/index/empty.jpg" class="img-fluid px-sm-5 px-lg-0 white-border"
+                            alt="irish coffee">
+                        <h4 class="gold-text mt-3 text-capitalize">irish coffee</h4>
+                        <h4 class="text-white mb-3">฿55</h4>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <img src="./images/index/empty.jpg" class="img-fluid px-sm-5 px-lg-0 white-border"
+                            alt="caffe americano">
+                        <h4 class="gold-text mt-3 text-capitalize">caffe americano</h4>
+                        <h4 class="text-white mb-3">฿55</h4>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <img src="./images/index/empty.jpg" class="img-fluid px-sm-5 px-lg-0 white-border"
+                            alt="filter-coffee">
+                        <h4 class="gold-text mt-3 text-capitalize">filter coffee</h4>
+                        <h4 class="text-white mb-3">฿50</h4>
+                    </div>
+                </div>
+            </div>
+            <a href="./menu.html" class="mt-2">
+                <button class="btn transparent-btn btn-lg"> View More</button></a>
+        </section>
+
+        <section class="text-center light-black py-5">
+            <div class="container">
+                <div class="row mb-md-3 mb-1">
+                    <div class="col-md-3 col-6 mb-md-0 p-md-2 p-1 mb-1"><img src="./images/index/empty.jpg" alt="">
+                    </div>
+                    <div class="col-md-3 col-6 mb-md-0 p-md-2 p-1 mb-1 "><img src="./images/index/empty.jpg" alt="">
+                    </div>
+                    <div class="col-md-3 col-6 mb-md-0 p-md-2 p-1 mb-1 "><img src="./images/index/empty.jpg" alt="">
+                    </div>
+                    <div class="col-md-3 col-6 mb-md-0 p-md-2 p-1 mb-1 "><img src="./images/index/empty.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-6 mb-md-0 p-md-2 p-1 mb-1 "><img src="./images/index/empty.jpg" alt="">
+                    </div>
+                    <div class="col-md-3 col-6 mb-md-0 p-md-2 p-1 mb-1 "><img src="./images/index/empty.jpg" alt="">
+                    </div>
+                    <div class="col-md-3 col-6 mb-md-0 p-md-2 p-1 mb-1"><img src="./images/index/empty.jpg" alt="">
+                    </div>
+                    <div class="col-md-3 col-6 mb-md-0 p-md-2 p-1 mb-1"><img src="./images/index/empty.jpg" alt="">
+                    </div>
+                </div>
+                <!-- </div> -->
+
+            </div>
+        </section>
+    </main>
+    <div class="container-fluid footer">
+        <footer class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex flex-column bottom-details">
+                    <div>
+                        <a href="/index.html" class="footer-top">
+                            <p class="glow-text">HiSchoolCafe</p>
+                        </a>
+                        <p class="info d-flex align-items-center"><img src="./images/about/phone-icon.svg" alt="phone">
+                            <span>
+                                09-4669-3666</span>
+                        </p>
+                        <p class="info d-flex align-items-center"><img src="./images/about/location icon.svg"
+                                alt="location"> <span>98, Bang Krang,
+                                Mueang Nonthaburi District,
+                                Nonthaburi 11000,
+                            </span></p>
+                        <p class="info d-flex align-items-center"><img src="./images/about/mail-icon.svg" alt="mail">
+                            <span>hischoolcafe404@gmail.com</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 d-flex flex-column align-items-md-center bottom-details">
+                    <div>
+                        <div class="footer-top">
+                            <h3 class="glow-text">Working Days</h3>
+                        </div>
+                        <p>Monday-Friday <br><span class="time">06.30 AM. - 05.00 PM.</span></p>
+
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex flex-column align-items-md-center bottom-details">
+                    <div style="margin-bottom:1rem">
+                        <div class="footer-top">
+                            <h3 class="glow-text">Follow Us</h3>
+                        </div>
+                        <div class="row pl-1 justify-content-center align-items-center"
+                            style="height: 45%; text-align: center;">
+                            <div>
+                                <a href="https://www.instagram.com/hi_school_cafe/" target="_blank">
+                                    <img src="./images/about/Inst logo.svg" alt="instagram link" class="social-icon">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 50px;">
+                <span id="bottom" class="gold-text"> &copy;
+                    2025 HiSchoolCafe All Right Reserved by
+                    <a href="https://www.kpltgroup.com" target="_blank" class="gold-text">KPLTGROUP</a>
+                    (<a>CSTG</a>)
+                    & <a href="https://themehackers.github.io" target="_blank" class="gold-text">Dashsecurity</a>
+                </span>
+            </div>
+
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script src="./js/about.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
