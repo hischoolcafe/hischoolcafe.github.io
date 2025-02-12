@@ -30,6 +30,28 @@ body {
     background-position: 100% 50%; 
   }
 }
+.glow-text-navbartext {
+  font-size: 1em; 
+  font-weight: bold; 
+  color: transparent; 
+  background: linear-gradient(90deg, #f8be2a, #34bd27, #f8be2a); 
+  background-size: 250%; 
+  background-clip: text;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  animation: moveRight 3s linear infinite; 
+  text-shadow: 
+    0 0 10px #f8be2a, 
+}
+
+@keyframes moveRight {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%; 
+  }
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -60,10 +82,10 @@ img {
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 0.5rem 0.5rem;
+  background-color: #1c1c1c; 
 }
+
 .navbar-toggler {
   margin-left: auto;
 }
