@@ -12,7 +12,7 @@ Variables
 ===============
 */
 .glow-text {
-  font-size: 2.5em; 
+  font-size: 3.5em; 
   font-weight: bold; 
   color: transparent; 
   background: linear-gradient(90deg, #f8be2a, #cc00ff, #f8be2a); 
@@ -33,7 +33,28 @@ Variables
     background-position: 100% 50%; 
   }
 }
-
+.glow-text-important {
+    font-size: 1em; 
+    font-weight: bold; 
+    color: transparent; 
+    background: linear-gradient(90deg, #9243c7, #cc00ff, #f8be2a); 
+    background-size: 250%; 
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    animation: moveRight 3s linear infinite; 
+    text-shadow: 
+      0 0 10px #f8be2a, 
+}
+  
+  @keyframes moveRight {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%; 
+    }
+}
 :root {
     /* dark shades of primary color*/
     --clr-primary-1: hsl(205, 86%, 17%);
@@ -924,6 +945,20 @@ Services
     }
 } */
 
+/* .container {
+  width: 1366px;
+  padding: 0 5px;
+  max-width: calc(100% - 20px);
+  margin: 0 auto;
+} */
+
+/* .contact p, .footer p {
+  width: 80%;
+} */
+
+li.row i {
+    width: 80px;
+}
 .service-img-container {
     position: relative;
     transform: translateY(-0.001px); 
