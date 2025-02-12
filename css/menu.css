@@ -28,6 +28,28 @@ h1 {
     background-position: 100% 50%; 
   }
 }
+.glow-text-navbartext {
+  font-size: 1em; 
+  font-weight: bold; 
+  color: transparent; 
+  background: linear-gradient(90deg, #f8be2a, #34bd27, #f8be2a); 
+  background-size: 250%; 
+  background-clip: text;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  animation: moveRight 3s linear infinite; 
+  text-shadow: 
+    0 0 10px #f8be2a, 
+}
+
+@keyframes moveRight {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%; 
+  }
+}
 .white-border {
   border: 5px solid white;
   border-radius: 8px;
@@ -158,8 +180,8 @@ body {
 }
 
 .navbar {
-  padding: 0rem 0rem;
-  background-color: #c7a972; 
+  padding: 0.5rem 0.5rem;
+  background-color: #1c1c1c; 
 }
 
 .navbar-light .navbar-nav .nav-link {
