@@ -33,6 +33,29 @@ a:hover {
     background-position: 100% 50%; 
   }
 }
+.glow-text-navbartext {
+  font-size: 1em; 
+  font-weight: bold; 
+  color: transparent; 
+  background: linear-gradient(90deg, #f8be2a, #34bd27, #f8be2a); 
+  background-size: 250%; 
+  background-clip: text;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  animation: moveRight 3s linear infinite; 
+  text-shadow: 
+    0 0 10px #f8be2a, 
+}
+
+@keyframes moveRight {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%; 
+  }
+}
+
 .white-border {
   border: 5px solid white;
   border-radius: 8px;
@@ -146,4 +169,50 @@ footer > div {
   .navbar-light .navbar-nav .nav-link.active {
     color: #fff !important;
   }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.scroll-animation {
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animation.active {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+
+.button-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes backgroundMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.moving-bg {
+  background: linear-gradient(270deg, #ff7e5f, #feb47b);
+  background-size: 400% 400%;
+  animation: backgroundMove 10s ease infinite;
 }
